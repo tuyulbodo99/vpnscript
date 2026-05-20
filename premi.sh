@@ -20,22 +20,22 @@ export IP=$( curl -sS icanhazip.com )
 
 # // Clear Data
 clear
-clear && clear && clear
-clear;clear;clear
+clear
+clear
 
 clear
 # Valid Script
 ipsaya=$(curl -sS ipv4.icanhazip.com)
-data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+data_server=$(curl -fsSL https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e " WELCOME TO HOKAGE LEGEND VPN ${YELLOW}(${NC}${green}Stable Edition${NC}${YELLOW})${NC}"
+echo -e " WELCOME TO DEVCULTURE VPS ${YELLOW}(${NC}${green}Premium Edition${NC}${YELLOW})${NC}"
 echo -e " PROSES PENGECEKAN IP ADDRESS ANDA !!"
 echo -e "${purple}----------------------------------------------------------${NC}"
-echo -e " ›AUTHOR : ${green}HOKAGE LEGEND® ${NC}${YELLOW}(${NC}${green}V 3.2${NC}${YELLOW})${NC}"
-echo -e " ›TEAM 🅥🅝: HOKAGE LEGEND ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e " ›AUTHOR : ${green}DevCulture® ${NC}${YELLOW}(${NC}${green}v3.2.0${NC}${YELLOW})${NC}"
+echo -e " ›TEAM 🅥🅝: DevCulture ${YELLOW}(${NC} 2026 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -88,7 +88,7 @@ gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/hokagelegend2025/vpnscript/main"
+    REPO="https://raw.githubusercontent.com/devculturebot/vpnscript/main"
 
 ####
 start=$(date +%s)
@@ -152,7 +152,7 @@ print_install "Membuat direktori xray"
     done < /proc/meminfo
     Ram_Usage="$((mem_used / 1024))"
     Ram_Total="$((mem_total / 1024))"
-    export tanggal=`date -d "0 days" +"%d-%m-%Y - %X" `
+    export tanggal=$(date -d "0 days" +"%d-%m-%Y - %X" )
     export OS_Name=$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )
     export Kernel=$( uname -r )
     export Arch=$( uname -m )
@@ -275,7 +275,7 @@ curl "ipinfo.io/city?token=7a814b6263b02c" > /root/.city
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
-izinsc="https://raw.githubusercontent.com/hokagelegend2025/ijin/main/alpha"
+izinsc="https://raw.githubusercontent.com/devculturebot/ijin/main/alpha"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
@@ -303,7 +303,7 @@ mai="datediff "$Exp" "$DATE""
 # Status Expired Active
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
-today=`date -d "0 days" +"%Y-%m-%d"`
+today=$(date -d "0 days" +"%Y-%m-%d")
 Exp1=$(curl $izinsc | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
@@ -328,7 +328,7 @@ TIMEZONE=$(printf '%(%H:%M:%S)T')
 <code>Time     :</code><code>$TIMEZONE</code>
 <code>Exp Sc.  :</code><code>$exp</code>
 <code>─────────────────────────────</code>
-<b> HOKAGE LEGEND VPN STORE SCRIPT  </b>
+<b> DEVCULTURE VPS STORE SCRIPT  </b>
 <code>─────────────────────────────</code>
 <i>Automatic Notifications From Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/ohmyvillain"}]]}' 
@@ -538,7 +538,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/hokagelegend2025/vpnscript/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
+wget -q https://raw.githubusercontent.com/devculturebot/vpnscript/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
@@ -590,7 +590,7 @@ clear
 print_install "Menginstall Dropbear"
 # // Installing Dropbear
 apt-get install dropbear -y > /dev/null 2>&1
-wget -q -O /etc/default/dropbear https://raw.githubusercontent.com/hokagelegend2025/vpnscript/main/config/dropbear.conf
+wget -q -O /etc/default/dropbear https://raw.githubusercontent.com/devculturebot/vpnscript/main/config/dropbear.conf
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
@@ -600,7 +600,7 @@ print_success "Dropbear"
 function ins_udpSSH(){
 clear
 print_install "Menginstall Udp-custom"
-wget -q https://raw.githubusercontent.com/hokagelegend2025/vpnscript/main/udp-custom/udp-custom.sh
+wget -q https://raw.githubusercontent.com/devculturebot/vpnscript/main/udp-custom/udp-custom.sh
 chmod +x udp-custom.sh 
 bash udp-custom.sh
 rm -fr udp-custom.sh
@@ -723,7 +723,7 @@ echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/hokage.txt https://raw.githubusercontent.com/hokagelegend2025/vpnscript/main/files/issue.net
+wget -O /etc/devculture.txt https://raw.githubusercontent.com/devculturebot/vpnscript/main/files/issue.net
 print_success "Fail2ban"
 }
 
@@ -1016,7 +1016,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ SCRIPT BY HOKAGE LEGEND ]-==============="
+echo "===============-[ SCRIPT BY DevCulture ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
