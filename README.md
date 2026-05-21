@@ -1,63 +1,107 @@
+<div align="center">
 
-![Screenshot 2024-06-05 082544](https://github.com/hokagelegend9999/alpha/assets/158546743/ee0b4e39-3384-4cb9-bf74-ba72b89a2a43)
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=1000&color=9B59B6&center=true&vCenter=true&width=600&lines=VPN+Script;DevCulture+Full+VPN+Installer;SSH+%7C+Xray+%7C+OpenVPN+%7C+SlowDNS" alt="Typing SVG" />
 
-### INSTALL SCRIPT 
+<br/>
+
+[![Part of DevCulture](https://img.shields.io/badge/ecosystem-DevCulture-9b59b6?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/tuyulbodo99)
+[![Shell](https://img.shields.io/badge/shell-bash-1a1a2e?style=for-the-badge&logo=gnubash&logoColor=white)](https://github.com/tuyulbodo99/vpnscript)
+[![Xray](https://img.shields.io/badge/Xray-latest-6c3483?style=for-the-badge)](https://github.com/XTLS/Xray-core)
+[![Sync](https://img.shields.io/badge/sync-auto-5b2c6f?style=for-the-badge&logo=sync&logoColor=white)](https://github.com/tuyulbodo99/devculture-vps/blob/main/sync.sh)
+
+</div>
+
+---
+
+## 🟣 Overview
+
+**VPNScript** adalah installer VPN lengkap dari ekosistem DevCulture. Mendukung SSH, Xray terbaru, OpenVPN, SlowDNS, haproxy, noobzvpn, dan sistem manajemen pengguna premium.
+
+> 🔗 **Terhubung penuh dengan ekosistem DevCulture** — disinkronkan otomatis via `sync.sh`
+
+---
+
+## 🌐 Ekosistem DevCulture
+
+| Repo | Fungsi |
+|------|--------|
+| [`devculture-vps`](https://github.com/tuyulbodo99/devculture-vps) | 🏠 Core installer & panel |
+| [`hokagescript`](https://github.com/tuyulbodo99/hokagescript) | ⚙️ Menu & service scripts |
+| **[`vpnscript`](https://github.com/tuyulbodo99/vpnscript)** | 🔒 **VPN installer lengkap** ← Anda di sini |
+| [`vps-script`](https://github.com/tuyulbodo99/vps-script) | 🔧 SSH tunnel |
+| [`ijin`](https://github.com/tuyulbodo99/ijin) | 🛡️ License system |
+
+---
+
+## ⚡ Instalasi
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/hokagelegend2025/vpnscript/refs/heads/main/premi.sh && chmod +x premi.sh && ./premi.sh
+
+### Update via Ekosistem
+
+```bash
+# Update semua komponen DevCulture sekaligus:
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/sync.sh)
 ```
 
-## UPDATE SCRIPT
+---
+
+## 📦 Protokol & Port
+
+| Protokol | Port |
+|----------|------|
+| OpenSSH | 22, 53, 2222, 2269 |
+| SSH WebSocket | 80 |
+| SSH SSL WebSocket | 443 |
+| Stunnel5 | 222, 777 |
+| Dropbear | 109, 143 |
+| BadVPN / UDPGW | 7100–7300 |
+| Nginx | 81 |
+| Xray VMess TLS | 443 |
+| Xray VMess Non-TLS | 80 |
+| Xray VLess TLS | 443 |
+| Xray Trojan WS/gRPC | 443 |
+| SlowDNS | 53 |
+
+---
+
+## 🗂️ Struktur Repo
+
 ```
-wget -q https://raw.githubusercontent.com/hokagelegend2025/vpnscript/refs/heads/main/update.sh && chmod +x update.sh && ./update.sh
+vpnscript/
+├── premi.sh            # Installer utama (full VPN)
+├── update.sh           # Update semua service
+├── ssh/                # SSH & WebSocket configs
+├── config/             # Xray & Nginx configs
+├── bot/                # Telegram bot
+├── menu/               # Menu interaktif
+├── udp-custom/         # UDP custom tunnel
+└── files/              # File pendukung
 ```
 
-### SUPPORT OS LINUX
-- UBUNTU 20.04.05
-- DEBIAN 10
+---
 
-### SETTING CLOUDFLARE
-```
-- SSL/TLS : FULL
-- SSL/TLS Recommender : OFF
-- GRPC : ON
-- WEBSOCKET : ON
-- Always Use HTTPS : OFF
-- UNDER ATTACK MODE : OFF
-```
-### INFO PORT
-```
-- PORT WEBSOCKET » 80
-- PORT TLS / SSL » 443
-- PORT HANCED WS » 80 » 8080
-- PORT NOOBZVPN  » 2082 » 8880  
-```
-### `WARNING !`
-```
-Jika Mendapatkan Status Service Off
-Silahkan Restart Service.
-Jika Statsus Service Masih Off
-Silahkan Reboot vps kalian
-```
+## 🔧 Fitur
 
+- ✅ Xray Core versi terbaru (auto-detect)
+- ✅ SSL via acme.sh (Let's Encrypt / ZeroSSL)
+- ✅ HAProxy stream multiplexer
+- ✅ NoobzVPN support
+- ✅ Auto-reboot + cron scheduler
+- ✅ Fail2Ban protection
+- ✅ Notifikasi Telegram otomatis
+- ✅ Manajemen user SSH & Xray
+- ✅ Terhubung ke sistem ijin terpusat
 
-- Langkah 1: 
-Membuat Bot di Telegram
-Buka Telegram dan Cari BotFather:
+---
 
-Cari BotFather di Telegram dengan mengetikkan "BotFather" di kolom pencarian.
-Pilih BotFather (akun resmi dengan tanda centang biru).
-Membuat Bot Baru:
-![Screenshot 2024-06-04 115130](https://github.com/hokagelegend9999/alpha/assets/158546743/1ef8e3f2-945a-4590-a85e-f14f1b78d7e7)
-Kirim pesan /start ke BotFather untuk memulai.
-Kirim pesan /newbot untuk membuat bot baru.
-Ikuti instruksi untuk memberikan nama dan username untuk bot Anda.
-Setelah selesai, BotFather akan memberikan token API bot. Simpan token ini karena akan digunakan dalam skrip Anda.
+<div align="center">
 
+[![Telegram](https://img.shields.io/badge/Telegram-@devculturebot-9b59b6?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/devculturebot)
+[![GitHub](https://img.shields.io/badge/GitHub-tuyulbodo99-1a1a2e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tuyulbodo99)
 
-- Siapkan Juga Chat ID Telegram atau User Id telegram Untuk menggunakan bot Telegram
-- Buka aplikasi Telegram dan cari bot bernama "Userinfobot" atau "Get_id_bot".
-- 
-  ![Screenshot 2024-06-05 082241](https://github.com/hokagelegend9999/alpha/assets/158546743/e97b1869-a38a-4899-a5fb-3a6b331b3558)
+<sub>© 2024 DevCulture VPS Store · Part of <a href="https://github.com/tuyulbodo99">tuyulbodo99</a> Ecosystem</sub>
 
-Klik "Start" untuk memulai bot.
-Bot akan secara otomatis mengirimkan pesan berisi chat ID kamu.
+</div>
