@@ -1,108 +1,178 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=1000&color=9B59B6&center=true&vCenter=true&width=600&lines=VPN+Script;DevCulture+Full+VPN+Installer;SSH+%7C+Xray+%7C+OpenVPN+%7C+SlowDNS" alt="Typing SVG" />
+<img src="https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/assets/cyberpunk-typing.png" width="100%" alt="DevCulture VPN - Cyberpunk" />
 
 <br/>
 
-[![Part of DevCulture](https://img.shields.io/badge/ecosystem-DevCulture-9b59b6?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/tuyulbodo99)
-[![Shell](https://img.shields.io/badge/shell-bash-1a1a2e?style=for-the-badge&logo=gnubash&logoColor=white)](https://github.com/tuyulbodo99/vpnscript)
-[![Xray](https://img.shields.io/badge/Xray-latest-6c3483?style=for-the-badge)](https://github.com/XTLS/Xray-core)
-[![OS](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Debian-2c2c54?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/tuyulbodo99/vpnscript)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=DevCulture+VPN+Script;Full+VPN+Installer;OpenVPN+%2B+WireGuard+%2B+SlowDNS;Ubuntu+22.04+Ready)](https://git.io/typing-svg)
+
+<br/>
+
+![GitHub Stars](https://img.shields.io/github/stars/tuyulbodo99/vpnscript?style=for-the-badge&color=a855f7&labelColor=0d0d0d)
+![Platform](https://img.shields.io/badge/Platform-Ubuntu%2022.04-a855f7?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0d0d0d)
+![Shell](https://img.shields.io/badge/Shell-Bash%205-7c3aed?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0d0d0d)
 
 </div>
 
 ---
 
-## ⚡ Install — Satu Perintah, Langsung Jalan
+<div align="center">
 
-> **Copy → Paste → Enter. Selesai.**
+### 🚀 ONE-CLICK INSTALL
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)
 ```
 
-### 🔄 Update Script
+</div>
 
+---
+
+## 📦 Protokol VPN yang Didukung
+
+<table>
+<tr>
+<td width="33%">
+
+**🔵 OpenVPN**
+- TCP & UDP
+- SSL/TLS encrypted
+- Config file (.ovpn)
+- Multi-platform
+
+</td>
+<td width="33%">
+
+**🟢 WireGuard**
+- Ultra-fast & modern
+- Low latency
+- Config QR code
+- Mobile friendly
+
+</td>
+<td width="33%">
+
+**🟣 SlowDNS**
+- Bypass firewall ketat
+- DNS-based tunnel
+- Inject payload support
+- Free internet trick
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+**⚡ Shadowsocks**
+- AEAD encryption
+- Socks5 proxy
+- Multi-user support
+
+</td>
+<td width="33%">
+
+**🔴 V2Ray / Xray**
+- VLESS + Reality
+- VMess WebSocket
+- Trojan TLS
+- gRPC support
+
+</td>
+<td width="33%">
+
+**🟠 SSH Tunnel**
+- HTTP Injector
+- NPay / NetSpark
+- WebSocket config
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Perintah
+
+### Install VPN Lengkap
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)
+```
+
+### Install OpenVPN Saja
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/openvpn.sh)
+```
+
+### Install WireGuard Saja
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/wireguard.sh)
+```
+
+### Install SlowDNS Saja
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/slowdns.sh)
+```
+
+### Update Script
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/update.sh)
 ```
 
-### 🔄 Sync Semua Komponen DevCulture
-
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/sync.sh)
-```
-
 ---
 
-## 🟣 Overview
+## 📱 Format Config Client
 
-**VPNScript** adalah installer VPN lengkap dari ekosistem DevCulture. Mendukung SSH, Xray terbaru, OpenVPN, SlowDNS, haproxy, noobzvpn, dan sistem manajemen pengguna premium.
+```
+# HTTP Injector / NPay
+Host      : [IP VPS]
+Port SSH  : 22 / 80 / 443
+Username  : [user]
+Password  : [pass]
+Payload   : GET wss://bug.com/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]
 
-> 🔗 **Terhubung penuh dengan ekosistem DevCulture** — disinkronkan otomatis via `sync.sh`
+# OpenVPN
+remote [IP VPS] 1194
+proto udp
+dev tun
+... (lihat file .ovpn yang dihasilkan)
+
+# WireGuard
+[Interface]
+PrivateKey = ...
+Address = 10.0.0.2/24
+DNS = 8.8.8.8
+[Peer]
+PublicKey = ...
+Endpoint = [IP VPS]:51820
+AllowedIPs = 0.0.0.0/0
+```
 
 ---
 
 ## 🌐 Ekosistem DevCulture
 
-| Repo | Fungsi | One-Click Install |
-|------|--------|-------------------|
-| [`devculture-vps`](https://github.com/tuyulbodo99/devculture-vps) | 🏠 Core installer | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/install.sh)` |
-| [`hokagescript`](https://github.com/tuyulbodo99/hokagescript) | ⚙️ Menu scripts | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/hokagescript/main/setup.sh)` |
-| **[`vpnscript`](https://github.com/tuyulbodo99/vpnscript)** | 🔒 **VPN installer** ← ini | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)` |
-| [`vps-script`](https://github.com/tuyulbodo99/vps-script) | 🔧 SSH tunnel | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vps-script/main/install)` |
-| [`ijin`](https://github.com/tuyulbodo99/ijin) | 🛡️ License DB | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/ijin/main/check-ijin.sh)` |
+| Repository | Fungsi |
+|------------|--------|
+| 🟣 [devculture-vps](https://github.com/tuyulbodo99/devculture-vps) | Core Panel + SSH + WebSocket |
+| 🟣 [hokagescript](https://github.com/tuyulbodo99/hokagescript) | Menu Layanan & Services |
+| 🟣 [vpnscript](https://github.com/tuyulbodo99/vpnscript) | Full VPN Installer |
+| 🟣 [vps-script](https://github.com/tuyulbodo99/vps-script) | SSH Tunnel Setup |
+| 🟣 [ijin](https://github.com/tuyulbodo99/ijin) | Sistem Lisensi & Perizinan |
 
 ---
 
-## 📦 Protokol & Port
+## 🖥️ Persyaratan
 
-| Protokol | Port |
-|----------|------|
-| OpenSSH | 22, 53, 2222, 2269 |
-| SSH WebSocket | 80 |
-| SSH SSL WebSocket | 443 |
-| Stunnel5 | 222, 777 |
-| Dropbear | 109, 143 |
-| BadVPN / UDPGW | 7100–7300 |
-| Nginx | 81 |
-| Xray VMess TLS | 443 |
-| Xray VMess Non-TLS | 80 |
-| Xray VLess TLS | 443 |
-| Xray Trojan WS/gRPC | 443 |
-| SlowDNS | 53 |
-
----
-
-## ✅ Fitur
-
-- Xray Core versi terbaru (auto-detect)
-- SSL via acme.sh (Let's Encrypt / ZeroSSL)
-- HAProxy stream multiplexer
-- NoobzVPN support
-- Auto-reboot + cron scheduler
-- Fail2Ban protection
-- Notifikasi Telegram otomatis
-- Manajemen user SSH & Xray
-- Terhubung ke sistem ijin terpusat
-
----
-
-## 🔧 Requirements
-
-| Item | Detail |
-|------|--------|
-| OS | Debian 10/11/12 · Ubuntu 20.04/22.04 |
-| Akses | **Root** |
-| Domain | Pointing ke IP VPS |
+| OS | RAM | Storage | Akses |
+|----|-----|---------|-------|
+| Ubuntu 20.04 / 22.04 LTS | Min 512 MB | Min 5 GB | Root |
 
 ---
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Order%20%26%20Support-@devculturebot-9b59b6?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/devculturebot)
-[![GitHub](https://img.shields.io/badge/GitHub-tuyulbodo99-1a1a2e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tuyulbodo99)
+**DevCulture VPS Store** · [github.com/tuyulbodo99](https://github.com/tuyulbodo99) · [@devculturebot](https://t.me/devculturebot)
 
-<sub>© 2024 DevCulture VPS Store · Part of <a href="https://github.com/tuyulbodo99">tuyulbodo99</a> Ecosystem</sub>
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=a855f7&height=80&section=footer)
 
 </div>
