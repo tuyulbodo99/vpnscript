@@ -7,9 +7,31 @@
 [![Part of DevCulture](https://img.shields.io/badge/ecosystem-DevCulture-9b59b6?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/tuyulbodo99)
 [![Shell](https://img.shields.io/badge/shell-bash-1a1a2e?style=for-the-badge&logo=gnubash&logoColor=white)](https://github.com/tuyulbodo99/vpnscript)
 [![Xray](https://img.shields.io/badge/Xray-latest-6c3483?style=for-the-badge)](https://github.com/XTLS/Xray-core)
-[![Sync](https://img.shields.io/badge/sync-auto-5b2c6f?style=for-the-badge&logo=sync&logoColor=white)](https://github.com/tuyulbodo99/devculture-vps/blob/main/sync.sh)
+[![OS](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Debian-2c2c54?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/tuyulbodo99/vpnscript)
 
 </div>
+
+---
+
+## ⚡ Install — Satu Perintah, Langsung Jalan
+
+> **Copy → Paste → Enter. Selesai.**
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)
+```
+
+### 🔄 Update Script
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/update.sh)
+```
+
+### 🔄 Sync Semua Komponen DevCulture
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/sync.sh)
+```
 
 ---
 
@@ -23,28 +45,13 @@
 
 ## 🌐 Ekosistem DevCulture
 
-| Repo | Fungsi |
-|------|--------|
-| [`devculture-vps`](https://github.com/tuyulbodo99/devculture-vps) | 🏠 Core installer & panel |
-| [`hokagescript`](https://github.com/tuyulbodo99/hokagescript) | ⚙️ Menu & service scripts |
-| **[`vpnscript`](https://github.com/tuyulbodo99/vpnscript)** | 🔒 **VPN installer lengkap** ← Anda di sini |
-| [`vps-script`](https://github.com/tuyulbodo99/vps-script) | 🔧 SSH tunnel |
-| [`ijin`](https://github.com/tuyulbodo99/ijin) | 🛡️ License system |
-
----
-
-## ⚡ Instalasi
-
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)
-```
-
-### Update via Ekosistem
-
-```bash
-# Update semua komponen DevCulture sekaligus:
-bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/sync.sh)
-```
+| Repo | Fungsi | One-Click Install |
+|------|--------|-------------------|
+| [`devculture-vps`](https://github.com/tuyulbodo99/devculture-vps) | 🏠 Core installer | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/main/install.sh)` |
+| [`hokagescript`](https://github.com/tuyulbodo99/hokagescript) | ⚙️ Menu scripts | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/hokagescript/main/setup.sh)` |
+| **[`vpnscript`](https://github.com/tuyulbodo99/vpnscript)** | 🔒 **VPN installer** ← ini | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vpnscript/main/premi.sh)` |
+| [`vps-script`](https://github.com/tuyulbodo99/vps-script) | 🔧 SSH tunnel | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/vps-script/main/install)` |
+| [`ijin`](https://github.com/tuyulbodo99/ijin) | 🛡️ License DB | `bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/ijin/main/check-ijin.sh)` |
 
 ---
 
@@ -67,39 +74,33 @@ bash <(curl -fsSL https://raw.githubusercontent.com/tuyulbodo99/devculture-vps/m
 
 ---
 
-## 🗂️ Struktur Repo
+## ✅ Fitur
 
-```
-vpnscript/
-├── premi.sh            # Installer utama (full VPN)
-├── update.sh           # Update semua service
-├── ssh/                # SSH & WebSocket configs
-├── config/             # Xray & Nginx configs
-├── bot/                # Telegram bot
-├── menu/               # Menu interaktif
-├── udp-custom/         # UDP custom tunnel
-└── files/              # File pendukung
-```
+- Xray Core versi terbaru (auto-detect)
+- SSL via acme.sh (Let's Encrypt / ZeroSSL)
+- HAProxy stream multiplexer
+- NoobzVPN support
+- Auto-reboot + cron scheduler
+- Fail2Ban protection
+- Notifikasi Telegram otomatis
+- Manajemen user SSH & Xray
+- Terhubung ke sistem ijin terpusat
 
 ---
 
-## 🔧 Fitur
+## 🔧 Requirements
 
-- ✅ Xray Core versi terbaru (auto-detect)
-- ✅ SSL via acme.sh (Let's Encrypt / ZeroSSL)
-- ✅ HAProxy stream multiplexer
-- ✅ NoobzVPN support
-- ✅ Auto-reboot + cron scheduler
-- ✅ Fail2Ban protection
-- ✅ Notifikasi Telegram otomatis
-- ✅ Manajemen user SSH & Xray
-- ✅ Terhubung ke sistem ijin terpusat
+| Item | Detail |
+|------|--------|
+| OS | Debian 10/11/12 · Ubuntu 20.04/22.04 |
+| Akses | **Root** |
+| Domain | Pointing ke IP VPS |
 
 ---
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Telegram-@devculturebot-9b59b6?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/devculturebot)
+[![Telegram](https://img.shields.io/badge/Order%20%26%20Support-@devculturebot-9b59b6?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/devculturebot)
 [![GitHub](https://img.shields.io/badge/GitHub-tuyulbodo99-1a1a2e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tuyulbodo99)
 
 <sub>© 2024 DevCulture VPS Store · Part of <a href="https://github.com/tuyulbodo99">tuyulbodo99</a> Ecosystem</sub>
