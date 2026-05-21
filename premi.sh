@@ -1,6 +1,6 @@
 #!/bin/bash
 # DevCulture VPS — Premium Installer v3.2.0
-# @devculturebot | github.com/tuyulbodo99/vpnscript
+# @tuyulbodo99 | github.com/tuyulbodo99/vpnscript
 set -euo pipefail
 Green="\e[92;1m"
 RED="\033[31m"
